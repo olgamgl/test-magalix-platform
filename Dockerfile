@@ -5,6 +5,6 @@ FROM golang:latest
 RUN mkdir /magalix
 COPY simple-service /magalix
 # run micro-service after boot up
-ENTRYPOINT ["/magalix/simple-service"]
+ENTRYPOINT ["/olgamgl/simple-service"]
 #expose port 8080
 EXPOSE 8080
