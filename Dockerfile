@@ -2,8 +2,8 @@
 # to ./magalix/simple-service before docker build
 FROM golang:latest
 # executable folder
-RUN mkdir /magalix
-COPY simple-service /magalix
+RUN mkdir /olgamgl
+COPY simple-service /olgamgl
 # run micro-service after boot up
 ENTRYPOINT ["/olgamgl/simple-service"]
 #expose port 8080
