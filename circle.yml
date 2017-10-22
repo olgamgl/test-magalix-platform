@@ -8,8 +8,8 @@ dependencies:
     - go build -o simple-service
   override:
     #docker container command. Make sure you replace Magalix with your registry name
-    - docker build --rm=false -t magalix/simple-service .
-    - docker run -p 8080:8080 magalix/simple-service:
+    - docker build --rm=false -t olgamgl/simple-service .
+    - docker run -p 8080:8080 olgamgl/simple-service:
         background: true
     # Give container 3 seconds to load before testing it.
     - sleep 3
@@ -28,4 +28,4 @@ deployment:
       #docker access crednetials. Add these as environment variables to CircleCI project
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USERNAME -p $DOCKER_PWD
       # private registry image to be pushed to. Replace Magalix with your registry's name'
-      - docker push magalix/simple-service
+      - docker push olgamgl/simple-service
